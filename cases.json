@@ -1,0 +1,14 @@
+[
+  {
+    "id": "case-01",
+    "jd": "Senior Full-Stack Engineer\n\nRequired Qualifications:\n- 5+ years of React and modern frontend state management\n- Strong background in Node.js and distributed backend APIs\n- Experience designing scalable databases\n\nBonus Points:\n- Knowledge of Kubernetes and cloud deployment",
+    "company_url": "https://example.com",
+    "days": 5
+  },
+  {
+    "id": "case-02",
+    "jd": "Backend Developer\nNeed strong Python and SQL skills.",
+    "company_url": "https://example.com/team",
+    "days": 2
+  }
+]

@@ -1,0 +1,44 @@
+name: CI / CD Pipeline
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  test-and-build:
+    name: Test & Build Quality Pipeline
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js 20
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
+
+      - name: Install Monorepo Dependencies
+        run: |
+          npm install
+          npm --prefix backend install
+          npm --prefix frontend install
+
+      - name: Run Backend Vitest Suite
+        run: npm --prefix backend test
+        env:
+          NODE_ENV: test
+
+      - name: Run Batch Evaluator (Section 9 Compliance)
+        run: npx tsx backend/cli/evaluate.ts cases.json ci_kits.json
+        env:
+          NODE_ENV: test
+
+      - name: Build Frontend Production Bundle (Vite)
+        run: npm --prefix frontend run build
+
+      - name: Build Backend Production Code (TypeScript)
+        run: npm --prefix backend run build

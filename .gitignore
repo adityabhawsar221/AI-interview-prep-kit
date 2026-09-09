@@ -1,0 +1,50 @@
+# Dependencies
+node_modules
+.pnp
+.pnp.js
+
+# Testing & Coverage
+coverage
+*.lcov
+test_*.json
+test_*.js
+test_*.ts
+kits.json
+test_kits.json
+test_eval.json
+
+# Production Builds
+dist
+dist-ssr
+build
+*.local
+
+# Environment variables & secrets (CRITICAL)
+.env
+.env.*
+!.env.example
+*.env
+*.env.local
+.env.production
+.env.staging
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor & OS
+.DS_Store
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Deployment platforms
+.vercel
+.turbo
