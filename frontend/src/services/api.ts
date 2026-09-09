@@ -1,6 +1,7 @@
 import { KitData, KitRecord, JobProgress, User } from '../types';
 
-const API_BASE = '/api';
+const rawBase = import.meta.env.VITE_API_URL?.trim();
+const API_BASE = rawBase ? `${rawBase.replace(/\/$/, '')}/api` : '/api';
 
 function getAuthHeaders(): HeadersInit {
   const token = localStorage.getItem('prepkit_token');
