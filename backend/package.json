@@ -13,7 +13,11 @@
   },
   "dependencies": {
     "@google/generative-ai": "^0.24.0",
-    "ai-interview-prep-kit": "file:..",
+    "@types/bcryptjs": "^2.4.6",
+    "@types/cors": "^2.8.17",
+    "@types/express": "^5.0.0",
+    "@types/jsonwebtoken": "^9.0.8",
+    "@types/node": "^22.10.7",
     "axios": "^1.7.9",
     "bcryptjs": "^2.4.3",
     "cheerio": "^1.0.0",
@@ -23,16 +27,11 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.9.5",
     "robots-parser": "^3.0.1",
+    "typescript": "^5.7.3",
     "zod": "^3.24.1"
   },
   "devDependencies": {
-    "@types/bcryptjs": "^2.4.6",
-    "@types/cors": "^2.8.17",
-    "@types/express": "^5.0.0",
-    "@types/jsonwebtoken": "^9.0.8",
-    "@types/node": "^22.10.7",
     "tsx": "^4.19.2",
-    "typescript": "^5.7.3",
     "vitest": "^3.0.2"
   }
 }

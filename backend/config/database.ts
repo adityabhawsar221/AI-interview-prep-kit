@@ -7,7 +7,7 @@ export async function connectDatabase(): Promise<boolean> {
   try {
     await mongoose.connect(mongoUri, {
       serverSelectionTimeoutMS: 4000,
-    });
+    } as mongoose.ConnectOptions);
     console.log(`[MongoDB] Connected successfully to database cluster.`);
     return true;
   } catch (err: any) {
